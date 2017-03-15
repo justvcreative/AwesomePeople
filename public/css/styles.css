@@ -1,0 +1,28 @@
+a:hover {text-decoration: none;}
+.cards {
+    display: flex;
+    flex-wrap: wrap;
+    box-sizing: border-box;
+}
+.card {
+    background: #fffaef;
+    margin: 1rem;
+    padding: 1rem;
+    width: 300px;
+    min-height: 150px;
+    position: relative;
+}
+
+.controls {
+    position: absolute;
+    bottom: 0;
+    margin-bottom: 1rem;
+}
+
+button, label {
+    margin-top: 1rem;
+}
+
+.controls button {
+    margin-right: .5rem;
+}

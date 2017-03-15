@@ -1,0 +1,15 @@
+doctype html
+html
+    head
+        link(rel="stylesheet", href="./node_modules/bootstrap/dist/css/bootstrap.min.css")
+        link(rel="stylesheet", href="./css/font-awesome/css/font-awesome.min.css")
+        link(rel="stylesheet", href="./css/styles.css")
+        script(src="./node_modules/jquery/dist/jquery.min.js")
+        script(src="./node_modules/bootstrap/dist/js/bootstrap.min.js")
+        script(src="./node_modules/angular/angular.min.js")
+        script(src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular-route.js")
+        script(src="./js/module/app.module.js")
+        script(src="./js/config/app.config.js")
+        title Awesome People
+    body(ng-app="awesomeapp")
+        div(ng-view)
