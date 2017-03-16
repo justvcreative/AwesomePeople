@@ -1,40 +1,7 @@
 <section class="container">
   <h2>Awesome People</h2>
   <div ng-controller="mainCtrl" class="row">
-        
-    <div id="add">
-        <button type="button" class="btn btn-default" ng-click="createPerson()"><i aria-hidden="true" class="fa fa-plus fa-lg"></i>&nbsp; Add an Awesome Person</button>
-        <div class="row">
-            <div class="col-sm-3">
-               <div class="cards">
-                    <div class="card">
-                        <h4><strong>{{person.name}}</strong></h4>
-                        <p>{{person.department}}, {{person.website}}</p>
-                        <span class="email"><a href="mailto:{{person.email}}"><i aria-hidden="true" class="fa fa-envelope"></i>&nbsp; Email</a></span>
-                    </div>
-               </div>
-            </div>
-            <div class="col-sm-4">
-               <fieldset>
-                    <form>
-                        <div class="form-group">
-                            <label for="name">Name</label>
-                            <input type="text" class="form-control" id="name" placeholder="Name" ng-model="person.name">
-                            <label for="department">Department</label>
-                            <input type="text" class="form-control" id="department" placeholder="Department" ng-model="person.department">
-                            <label for="website">Website</label>
-                            <input type="text" class="form-control" id="website" placeholder="Website" ng-model="person.website">
-                            <label for="email">Email</label>
-                            <input type="email" class="form-control" id="email" placeholder="Email" ng-model="person.email">
-                            <button ng-click="savePerson()" type="button" class="btn btn-success btn-sm"><i aria-hidden="true" class="fa fa-check"></i>&nbsp; Save</button>
-                        </div>
-                    </form>
-                </fieldset>
-            </div>
-        </div>
-    </div>
-      
-      <div class="cards col-sm-12">
+    <div class="cards col-sm-12">
        <div ng-repeat="s in staff | orderBy: 'Name'" class="card">
         <h4><strong>{{s.Name}}</strong></h4>
         <p>{{s.Department}}, {{s.Website}}</p>
@@ -47,5 +14,6 @@
       </div>
       
     </div>
+    <a class="btn btn-default" href="/add"><i aria-hidden="true" class="fa fa-plus fa-lg"></i>&nbsp; Add an Awesome Person</a>
   </div>
 </section>

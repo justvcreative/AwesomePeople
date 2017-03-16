@@ -1,27 +1,26 @@
 // App Module
-const app = angular.module("awesomeapp", ["ngRoute"])
-    .config(function config($locationProvider, $routeProvider) {
-        $locationProvider.hashPrefix('!');
-        $routeProvider.when('/', {
+const app = angular.module("awesomeapp", ["ui.router"])
+    //Angular Routes
+    .config(function config($stateProvider, $urlRouterProvider) {
+        $routeProvider
+            .when('/', {
             templateUrl: '/js/template/app.template.html',
             controller: 'mainCtrl'
-        }).otherwise('/');
+        })
+            .when('/add', {
+            templateUrl: 'js/template/add-person.template.html',
+            controller: 'mainCtrl'
+        })
+            .otherwise('/');
     }
 );
 
 // Main Controller
 app.controller('mainCtrl', function($scope, $http){
-    // load mock data
-    $http({
-        url: 'js/staff.json',
-        method: 'GET'
-    }).then(function(res){
-        var staff = res.data;
-        $scope.staff = staff;
-    });
     
     $scope.person = { 
         "name": "John Rivera",
+        "job-title": "Designer",
         "department": "Creative Services",
         "website": "hipster.com",
         "email": "jr@hipster.com"
