@@ -2,5 +2,17 @@
     {"name": "Kelly Anderson",
     "jobtitle": "Designer",
     "company": "Google",
-    "email": "kelly.anderson@google.com"}
+    "email": "kelly.anderson@google.com"},
+    {"name": "Robert Jones",
+    "jobtitle": "Senior Accountant",
+    "company": "SalesForce",
+    "email": "robert.jones@salesforce.com"},
+    {"name": "Luis Rivera",
+    "jobtitle": "Sales Manager",
+    "company": "BrightWay Media",
+    "email": "luis.rivera@brightwaymedia.com"},
+    {"name": "Rashonda Davis",
+    "jobtitle": "Quality Analyst",
+    "company": "Microsoft",
+    "email": "rashonda.davis@google.com"}
 ]

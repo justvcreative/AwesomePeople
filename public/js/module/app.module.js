@@ -13,30 +13,27 @@ const app = angular.module("awesomeapp", ["ui.router"])
 );
 
 // Main Controller
-app.controller('mainCtrl', function($scope, $http){
+app.controller('mainCtrl', function($scope, $http, dataService){
     
-    // load mock data
+    /*// load mock data
     $http({
         url: 'js/mock/people.json',
         method: 'GET'
     }).then(function(res){
         var people = res.data;
         $scope.people = people;
-    });
+    });*/
     
-    $scope.person = { 
-        "name": "John Rivera",
-        "job-title": "Designer",
-        "department": "Creative Services",
-        "website": "hipster.com",
-        "email": "jr@hipster.com"
-    };
+    $scope.helloConsole = dataService.helloConsole;
     
     //CREATE
     $scope.createPerson = () => {
         return console.log('create a person');
     }
     //READ
+    dataService.getPeople(function(res) {
+        $scope.people = res.data;
+    });
     
     //UPDATE
     $scope.editPerson = () => {
@@ -50,4 +47,12 @@ app.controller('mainCtrl', function($scope, $http){
     $scope.deletePerson = () => {
         return console.log('delete a person');
     }
+});
+
+app.service('dataService', function($http){
+    this.helloConsole = function() {
+        console.log('this is the hello console service!');
+    }
+    
+    this.getPeople = (cb) => {$http.get('js/mock/people.json').then(cb)};
 });

@@ -9,14 +9,7 @@ a:hover {text-decoration: none;}
     margin: 1rem;
     padding: 1rem;
     width: 300px;
-    min-height: 150px;
     position: relative;
-}
-
-.controls {
-    position: absolute;
-    bottom: 0;
-    margin-bottom: 1rem;
 }
 
 button, label {
@@ -25,4 +18,8 @@ button, label {
 
 .controls button {
     margin-right: .5rem;
+}
+
+.edit-form {
+    margin: 1rem 0;
 }
