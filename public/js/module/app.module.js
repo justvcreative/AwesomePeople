@@ -2,21 +2,27 @@
 const app = angular.module("awesomeapp", ["ui.router"])
     //Angular Routes
     .config(function config($stateProvider, $urlRouterProvider) {
-        $routeProvider
-            .when('/', {
-            templateUrl: '/js/template/app.template.html',
+        $urlRouterProvider.otherwise('/');
+        $stateProvider
+        .state('home', {
+            url: '/',
+            templateUrl: '../js/template/app.template.html',
             controller: 'mainCtrl'
-        })
-            .when('/add', {
-            templateUrl: 'js/template/add-person.template.html',
-            controller: 'mainCtrl'
-        })
-            .otherwise('/');
+        });
     }
 );
 
 // Main Controller
 app.controller('mainCtrl', function($scope, $http){
+    
+    // load mock data
+    $http({
+        url: 'js/mock/people.json',
+        method: 'GET'
+    }).then(function(res){
+        var people = res.data;
+        $scope.people = people;
+    });
     
     $scope.person = { 
         "name": "John Rivera",
