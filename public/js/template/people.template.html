@@ -1,0 +1,22 @@
+<div ng-repeat="person in people | orderBy: 'Name'" class="card">
+    <label ng-hide="editing"><h4><strong>{{person.name}}</strong></h4></label>
+    <label ng-show="editing">Editing Name: {{person.name}}</label>
+    <input ng-show="editing" ng-model="person.name" type="text" class="form-control edit-form">
+    <p ng-hide="editing">{{person.jobtitle}}, {{person.company}}</p>
+    <label ng-show="editing">Editing Job Title: {{person.jobtitle}}</label>
+    <input ng-show="editing" ng-model="person.jobtitle" type="text" class="form-control edit-form">
+    <label ng-show="editing">Editing Company: {{person.company}}</label>
+    <input ng-show="editing" ng-model="person.company" type="text" class="form-control edit-form">
+    <span ng-hide="editing" class="email"><a href="mailto:{{person.email}}"><i aria-hidden="true" class="fa fa-envelope"></i>Email</a></span>
+    <label ng-show="editing">Editing Email: {{person.email}}</label>
+    <input ng-show="editing" ng-model="person.email" type="text" class="form-control edit-form">
+
+     <div class="controls clearfix">
+         <span class="pull-right">
+            <button ng-click="editing = !editing" ng-hide="editing" type="button" class="btn btn-primary btn-sm"><i aria-hidden="true" class="fa fa-pencil"></i>Edit</button>
+            <button ng-show="editing" ng-click="editing =false" type="button" class="btn btn-warning btn-sm"><i aria-hidden="true" class="fa fa-ban"></i>Cancel</button>
+            <button ng-show="editing" ng-click="deletePerson(person, $index)" type="button" class="btn btn-danger btn-sm"><i aria-hidden="true" class="fa fa-times"></i>Delete</button>
+            <button ng-show="editing" ng-click="editPerson(person)" type="button" class="btn btn-success btn-sm"><i aria-hidden="true" class="fa fa-check"></i>Save</button>
+         </span>
+    </div>
+</div>

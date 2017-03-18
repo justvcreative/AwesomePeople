@@ -6,7 +6,7 @@ a:hover {text-decoration: none;}
 }
 .card {
     background: #fffaef;
-    margin: 1rem;
+    margin: 0 1rem 1rem 0;
     padding: 1rem;
     width: 300px;
     position: relative;
@@ -16,10 +16,19 @@ button, label {
     margin-top: 1rem;
 }
 
-.controls button {
+.controls button, i {
     margin-right: .5rem;
 }
 
 .edit-form {
     margin: 1rem 0;
+}
+
+@media only screen and (max-width: 649px) {
+    h2 {
+        text-align: center;
+    }
+    .card {
+        margin: 0 auto 1rem;
+    }
 }

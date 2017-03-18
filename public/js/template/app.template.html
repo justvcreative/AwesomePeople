@@ -1,28 +1,10 @@
 <section class="container">
   <h2>Awesome People</h2>
   <div ng-controller="mainCtrl" class="row">
-    <div class="cards col-sm-12">
-       <div ng-repeat="person in people | orderBy: 'Name'" class="card">
-        <label ng-hide="editing"><h4><strong>{{person.name}}</strong></h4></label>
-        <label ng-show="editing">Editing Name: {{person.name}}</label>
-        <input ng-show="editing" ng-blur="editing = false" ng-model="person.name" type="text" class="form-control edit-form">
-        <p ng-hide="editing">{{person.jobtitle}}, {{person.company}}</p>
-        <label ng-show="editing">Editing Job Title: {{person.jobtitle}}</label>
-        <input ng-show="editing" ng-blur="editing = false" ng-model="person.jobtitle" type="text" class="form-control edit-form">
-        <label ng-show="editing">Editing Company: {{person.company}}</label>
-        <input ng-show="editing" ng-blur="editing = false" ng-model="person.company" type="text" class="form-control edit-form">
-        <span ng-hide="editing" class="email"><a href="mailto:{{person.email}}"><i aria-hidden="true" class="fa fa-envelope"></i>&nbsp; Email</a></span>
-        <label ng-show="editing">Editing Email: {{person.email}}</label>
-        <input ng-show="editing" ng-blur="editing = false" ng-model="person.email" type="text" class="form-control edit-form">
-        
-         <div class="controls">
-          <button ng-click="editing = !editing" ng-hide="editing" type="button" class="btn btn-primary btn-sm"><i aria-hidden="true" class="fa fa-pencil"></i>Edit</button>
-          <button ng-show="editing" ng-click="savePerson()" type="button" class="btn btn-success btn-sm"><i aria-hidden="true" class="fa fa-check"></i>Save</button>
-          <button ng-show="editing" ng-click="deletePerson()" type="button" class="btn btn-danger btn-sm"><i aria-hidden="true" class="fa fa-times"></i>Delete</button>
-        </div>
-      </div>
-      
+    <people class="cards col-lg-7"></people>
+    <div class="col-lg-3">
+        <button class="btn btn-default" href="" ng-click=" creating = !creating"><i aria-hidden="true" class="fa fa-plus fa-lg"></i>Add an Awesome Person</button>
+        <add-person ng-show="creating"></add-person>
     </div>
-    <button class="btn btn-default" href="" ng-click="createPerson()"><i aria-hidden="true" class="fa fa-plus fa-lg"></i>&nbsp; Add an Awesome Person</button>
   </div>
 </section>

@@ -1,30 +1,28 @@
 <div id="add">
-    <div class="row">
-        <div class="col-sm-3">
-           <div class="cards">
-                <div class="card">
-                    <h4><strong>{{person.name}}</strong></h4>
-                    <p>{{person.department}}, {{person.website}}</p>
-                    <span class="email"><a href="mailto:{{person.email}}"><i aria-hidden="true" class="fa fa-envelope"></i>&nbsp; Email</a></span>
-                </div>
-           </div>
-        </div>
-        <div class="col-sm-4">
-           <fieldset>
-                <form>
-                    <div class="form-group">
-                        <label for="name">Name</label>
-                        <input type="text" class="form-control" id="name" placeholder="Name" ng-model="person.name">
-                        <label for="department">Department</label>
-                        <input type="text" class="form-control" id="department" placeholder="Department" ng-model="person.department">
-                        <label for="website">Website</label>
-                        <input type="text" class="form-control" id="website" placeholder="Website" ng-model="person.website">
-                        <label for="email">Email</label>
-                        <input type="email" class="form-control" id="email" placeholder="Email" ng-model="person.email">
-                        <button ng-click="savePerson()" type="button" class="btn btn-success btn-sm"><i aria-hidden="true" class="fa fa-check"></i>&nbsp; Save</button>
-                    </div>
-                </form>
-            </fieldset>
+    <fieldset>
+        <form>
+            <div class="form-group clearfix">
+                <label for="name">Name</label>
+                <input type="text" class="form-control" id="name" placeholder="Name" ng-model="person.name">
+                <label for="jobtitle">Job Title</label>
+                <input type="text" class="form-control" id="jobtitle" placeholder="Job Title" ng-model="person.jobtitle">
+                <label for="company">Company</label>
+                <input type="text" class="form-control" id="company" placeholder="Company" ng-model="person.company">
+                <label for="email">Email</label>
+                <input type="email" class="form-control" id="email" placeholder="Email" ng-model="person.email">
+                <span class="pull-right">
+                    <button ng-click="creating = false" type="button" class="btn btn-danger btn-sm"><i aria-hidden="true" class="fa fa-ban"></i>Cancel</button>
+                    <button ng-click="createPerson(person)" type="button" class="btn btn-success btn-sm"><i aria-hidden="true" class="fa fa-check"></i>Save</button>
+                </span>
+            </div>
+        </form>
+    </fieldset>
+    <div class="cards">
+        <div class="card">
+            <h3>Preview</h3>
+            <h4><strong>{{person.name}}</strong></h4>
+            <p>{{person.jobtitle}}, {{person.company}}</p>
+            <span class="email"><a href="mailto:{{person.email}}"><i aria-hidden="true" class="fa fa-envelope"></i>Email</a></span>
         </div>
     </div>
 </div>

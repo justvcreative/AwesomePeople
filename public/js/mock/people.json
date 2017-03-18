@@ -14,5 +14,13 @@
     {"name": "Rashonda Davis",
     "jobtitle": "Quality Analyst",
     "company": "Microsoft",
-    "email": "rashonda.davis@google.com"}
+    "email": "rashonda.davis@google.com"},
+    {"name": "Faina Lawlor",
+    "jobtitle": "Brand Ambassador",
+     "company": "Vivid Imagination",
+    "email": "faina.lawlor@vividimagination.com"},
+    {"name": "Ruchira Tse",
+    "jobtitle": "Junior Developer",
+    "company": "Quadro Graphics",
+    "email": "ruchira.tse@quadrographics.com"}
 ]
