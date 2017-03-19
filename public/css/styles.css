@@ -5,7 +5,7 @@ a:hover {text-decoration: none;}
     box-sizing: border-box;
 }
 .card {
-    background: #fffaef;
+    background: AliceBlue;
     margin: 0 1rem 1rem 0;
     padding: 1rem;
     width: 300px;

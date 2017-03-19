@@ -1,13 +1,17 @@
 // Set Up Server and Listen on Port
 
 const express = require('express');
-const config = require('./config');
-const router = require('./routes');
+
+const config = require('./config/config');
+const router = require('./routes/routes');
 const bodyParser = require('body-parser');
 
 const app = express();
 
 const path = require('path');
+
+require('./database');
+require('./models/seed');
 
 app.use(bodyParser.json()); // for parsing application/json
 app.use(bodyParser.urlencoded({ extended: true })); // for parsing application/x-www-form-urlencoded
