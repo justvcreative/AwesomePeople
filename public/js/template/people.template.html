@@ -16,7 +16,7 @@
             <button ng-click="editing = !editing" ng-hide="editing" type="button" class="btn btn-primary btn-sm"><i aria-hidden="true" class="fa fa-pencil"></i>Edit</button>
             <button ng-show="editing" ng-click="editing =false" type="button" class="btn btn-warning btn-sm"><i aria-hidden="true" class="fa fa-ban"></i>Cancel</button>
             <button ng-show="editing" ng-click="deletePerson(person, $index)" type="button" class="btn btn-danger btn-sm"><i aria-hidden="true" class="fa fa-times"></i>Delete</button>
-            <button ng-show="editing" ng-click="editPerson(person)" type="button" class="btn btn-success btn-sm"><i aria-hidden="true" class="fa fa-check"></i>Save</button>
+            <button ng-show="editing" ng-click="savePerson(person, $index)" type="button" class="btn btn-success btn-sm"><i aria-hidden="true" class="fa fa-check"></i>Save</button>
          </span>
     </div>
 </div>
