@@ -12,6 +12,13 @@ a:hover {text-decoration: none;}
     position: relative;
 }
 
+.controls {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    margin: 1rem 0;
+}
+
 button, label {
     margin-top: 1rem;
 }

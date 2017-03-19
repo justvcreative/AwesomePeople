@@ -11,7 +11,7 @@
                 <label for="email">Email</label>
                 <input type="email" class="form-control" id="email" placeholder="Email" ng-model="person.email">
                 <span class="pull-right">
-                    <button ng-click="creating = false" type="button" class="btn btn-danger btn-sm"><i aria-hidden="true" class="fa fa-ban"></i>Cancel</button>
+                    <button ng-click="creating = false" type="button" class="btn btn-outline-warning btn-sm"><i aria-hidden="true" class="fa fa-ban"></i>Cancel</button>
                     <button ng-click="savePerson(person)" type="button" class="btn btn-success btn-sm"><i aria-hidden="true" class="fa fa-check"></i>Save</button>
                 </span>
             </div>
@@ -19,7 +19,7 @@
     </fieldset>
     <div class="cards">
         <div class="card">
-            <h3>Preview</h3>
+            <h5>Preview</h5>
             <h4><strong>{{person.name}}</strong></h4>
             <p>{{person.jobtitle}}, {{person.company}}</p>
             <span class="email"><a href="mailto:{{person.email}}"><i aria-hidden="true" class="fa fa-envelope"></i>Email</a></span>
