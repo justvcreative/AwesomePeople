@@ -3,7 +3,7 @@
 //App Controller
 angular.module("awesomeapp")
 .controller('mainCtrl', function($scope, $http, dataService){
-    //CREATE & Update
+    //CREATE & UPDATE
     $scope.savePerson = (person) => {
         dataService.savePerson(person);
     }
