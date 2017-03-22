@@ -13,7 +13,7 @@ angular.module("awesomeapp")
     //Add Person Directive
     .directive('addPerson', () => {
         return {
-            restrict: 'E',
+            restrict: 'EA',
             templateUrl: '../js/template/add-person.template.html',
             controller: 'mainCtrl'
         };

@@ -1,37 +1,82 @@
+header { 
+    background: gold;
+    padding: 0;
+}
 #title { margin: 1.25rem 0; }
-p { margin: 0; }
+h1, h2, h3, h4, h5, p, label { margin: 0; }
 
 a:hover {text-decoration: none;}
 .cards {
     display: flex;
     flex-wrap: wrap;
     box-sizing: border-box;
+    
 }
 .card {
     background: AliceBlue;
-    margin: 0 1rem 1rem 0;
     padding: 1rem;
-    width: 300px;
+    width: calc(1140px/4.25);
     position: relative;
+    display: flex;
+    margin: 0 .5rem .5rem 0;
+    align-items: stretch;
 }
 
-button, label {
+@keyframes moveUp {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+#addPerson {
+    padding: 2rem;
+}
+
+.creating-person {
+    background-color: pink;
+    animation: .5s moveUp ease-in-out;
+    
+}
+
+button{
     margin-top: 1rem;
 }
 
-.controls button, i {
+i {
     margin-right: .5rem;
 }
 
 .edit-form {
-    margin: 1rem 0;
+    margin-bottom: .5rem;
 }
 
-#addButton { margin-bottom: 2rem; }
+#add {
+    text-align: center;
+}
 
-@media only screen and (max-width: 649px) {
-    h2 {
+#addButton { 
+    margin: 1rem;
+}
+
+.btn-outline-white {
+    border-color: white;
+    color: white;
+}
+
+.btn-outline-white:focus, .btn-outline-white:hover {
+    background-color: white;
+    color: #0275d8;
+}
+
+@media only screen and (max-width: 767px) {
+    #title {
         text-align: center;
+    }
+    .cards {
+        justify-content: center;
     }
     .card {
         margin: 0 auto 1rem;
