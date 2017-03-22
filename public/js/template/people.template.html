@@ -1,11 +1,12 @@
-<div ng-repeat="person in people | orderBy: 'Name'" class="card">
-    <div ng-hide="editing">
+<div ng-repeat="person in people | orderBy: 'Name'">
+    <div ng-hide="editing" class="card">
         <label><h4><strong>{{person.name}}</strong></h4></label>
-        <p>{{person.jobtitle}}, <strong>{{person.company}}</strong></p>
+        <p>{{person.jobtitle}},</p>
+        <p><strong>{{person.company}}</strong></p>
         <span class="email"><a href="mailto:{{person.email}}"><i aria-hidden="true" class="fa fa-envelope"></i>Email</a></span>
         <button ng-click="editing = !editing" ng-hide="editing" type="button" class="btn btn-outline-primary btn-sm"><i aria-hidden="true" class="fa fa-pencil"></i>Edit</button>
     </div>
-     <div ng-show="editing">
+     <div ng-show="editing" class="card">
          <form>
              <fieldset>
                 <label>Editing Name: {{person.name}}</label>

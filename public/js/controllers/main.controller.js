@@ -5,14 +5,21 @@ angular.module("awesomeapp")
 .controller('mainCtrl', function($scope, $http, dataService){
     //CREATE & UPDATE
     $scope.savePerson = (person) => {
-        dataService.savePerson(person);
+        dataService.savePerson(person, (res) => {
+            $scope.getPeople();
+        })
+        
     }
     
     //READ
-    dataService.getPeople( (res) => {
-        let people = res.data
-        $scope.people = people;
-    });
+    $scope.getPeople = () => {
+        dataService.getPeople((res) => {
+            let people = res.data
+            return $scope.people = people;
+        });
+    }
+    
+    $scope.getPeople();
     
     //DELETE
     $scope.deletePerson = (person, $index) => {
