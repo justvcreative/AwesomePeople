@@ -1,9 +1,9 @@
 <header class="fixed-bottom">
-    <div ng-class="{'creating-person': creating}">
-        <add-person ng-show="creating"></add-person>
-    </div>
-    <div id="add">
+   <div id="add">
         <a id="addButton" role="button" class="btn btn-outline-white" href="" ng-click=" creating = !creating"><i aria-hidden="true" class="fa fa-plus fa-lg"></i>Add an Awesome Person</a>
+    </div>
+    <div class="wrapper" ng-class="{'creating-person': creating}">
+        <add-person ng-show="creating"></add-person>
     </div>
 </header>
 <section class="container">

@@ -1,7 +1,7 @@
 <div id="addPerson">
-    <fieldset>
-        <form>
-            <div class="form-group clearfix">
+    <form>
+        <div class="form-group clearfix">
+            <fieldset>
                 <label for="name">Name</label>
                 <input type="text" class="form-control" id="name" placeholder="Name" ng-model="person.name">
                 <label for="jobtitle">Job Title</label>
@@ -10,20 +10,11 @@
                 <input type="text" class="form-control" id="company" placeholder="Company" ng-model="person.company">
                 <label for="email">Email</label>
                 <input type="email" class="form-control" id="email" placeholder="Email" ng-model="person.email">
-                <span class="pull-right">
-                    <button ng-click="creating = false" type="button" class="btn btn-outline-warning btn-sm"><i aria-hidden="true" class="fa fa-ban"></i>Cancel</button>
-                    <button ng-click="savePerson(person)" type="button" class="btn btn-success btn-sm"><i aria-hidden="true" class="fa fa-check"></i>Save</button>
-                </span>
-            </div>
-        </form>
-    </fieldset>
-    <div class="cards">
-        <div class="card">
-            <h5>Preview</h5>
-            <h4><strong>{{person.name}}</strong></h4>
-            <p>{{person.jobtitle}}</p>
-            <p><strong>{{person.company}}</strong></p>
-            <span class="email"><a href="mailto:{{person.email}}"><i aria-hidden="true" class="fa fa-envelope"></i>Email</a></span>
+            </fieldset>
+            <span class="pull-right">
+                <button ng-click="creating = false" type="button" class="btn btn-outline-warning btn-sm"><i aria-hidden="true" class="fa fa-ban"></i>Cancel</button>
+                <button ng-click="savePerson(person)" type="button" class="btn btn-success btn-sm"><i aria-hidden="true" class="fa fa-check"></i>Save</button>
+            </span>
         </div>
-    </div>
+    </form>
 </div>
