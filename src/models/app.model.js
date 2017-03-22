@@ -4,6 +4,9 @@
 
 const mongoose = require('mongoose');
 
+//create a people schema
+//person will have a name, job title, their company, and their email address
+//all are strings
 const peopleSchema = new mongoose.Schema({
     name: String,
     jobtitle: String,

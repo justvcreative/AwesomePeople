@@ -1,6 +1,5 @@
 'use strict';
 // HTTP(S) routing/controllers
-
 const router = require('express').Router();
 const mongoose = require('mongoose');
 const People = require('../models/app.model');
@@ -36,11 +35,14 @@ router.get('/api', (req, res) => {
 
 //UPDATE: Route for updating(put) data
 router.put('/api/:id', (req, res) => {
+    //get the params from the request and put it in a variable
     let id = req.params.id;
     let person = req.body;
     if(person && person._id !== id) {
+        //if the person's id doesn't match the data
         return res.status(500).json({err: 'IDs do not match'});
     } else {
+        //find the person by the id and update them in the database and return new data
         People.findByIdAndUpdate(id, person, {new: true}, function(err, person) {
             if(err) {
                 return res.status(500).json({message: err.message});

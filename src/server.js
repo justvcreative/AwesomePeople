@@ -10,6 +10,7 @@ const app = express();
 
 const path = require('path');
 
+//call the database and seed the data
 require('./database');
 require('./models/seed');
 
