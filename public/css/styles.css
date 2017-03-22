@@ -1,7 +1,6 @@
 header { 
     padding: 0;
     position: relative;
-    background-color: pink;
 }
 #title { margin: 1.25rem 0; }
 h1, h2, h3, h4, h5, p, label { margin: 0; }
@@ -30,6 +29,8 @@ a:hover {text-decoration: none;}
     transform: translateY(0px);
     transition: .5s transform ease-in-out;
     z-index: -1;
+    color: white;
+    background-color: purple;
 }
 
 #addPerson {
@@ -37,7 +38,6 @@ a:hover {text-decoration: none;}
 }
 
 .creating-person {
-    background-color: pink;
     transform: translateY(-425px);
     transition: .5s transform ease-in-out;
 }
@@ -65,13 +65,13 @@ i {
 }
 
 .btn-outline-white {
-    border-color: white;
-    color: white;
+    border-color: purple;
+    color: purple;
 }
 
 .btn-outline-white:focus, .btn-outline-white:hover {
-    background-color: white;
-    color: #0275d8;
+    background-color: purple;
+    color: white;
 }
 
 @media only screen and (max-width: 767px) {
