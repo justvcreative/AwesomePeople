@@ -4,6 +4,8 @@
 Check out the Awesome People that work for this awesome company. This application is built using the MEAN stack and allows full CRUD (Create, Read, Update, Delete) operations. Built on the Bootstrap framework for responsive and clean design.
 
 #### Requirements: MongoDB, NodeJS, NPM
+Follow the instillation guides to install the required software.
+
 ##### NodeJS & NPM Installation Guides
 
 [Windows](http://blog.teamtreehouse.com/install-node-js-npm-windows)
@@ -18,7 +20,7 @@ Check out the Awesome People that work for this awesome company. This applicatio
 
 ### Running the App
 
-Once you have installed the requirements, run MongoDB.
+Once you have installed the requirements, run MongoDB in your command line or terminal shell.
 ```
 mongod
 ```
