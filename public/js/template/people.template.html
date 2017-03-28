@@ -18,7 +18,7 @@
                 <label>Editing Email: {{person.email}}</label>
                 <input ng-model="person.email" type="text" class="form-control edit-form"> 
              </fieldset>
-            <button ng-click="editing =false" type="button" class="btn btn-outline-warning btn-sm"><i aria-hidden="true" class="fa fa-ban"></i>Cancel</button>
+            <button ng-click="reset()" type="button" class="btn btn-outline-warning btn-sm"><i aria-hidden="true" class="fa fa-ban"></i>Cancel</button>
             <button ng-click="deletePerson(person, $index)" type="button" class="btn btn-outline-danger btn-sm"><i aria-hidden="true" class="fa fa-times"></i>Delete</button>
             <button ng-click="savePerson(person, $index)" type="submit" class="btn btn-success btn-sm"><i aria-hidden="true" class="fa fa-check"></i>Save</button>
          </form>

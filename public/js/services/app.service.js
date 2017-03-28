@@ -7,18 +7,18 @@ angular.module("awesomeapp")
     this.savePerson = (person, cb) => {
         //if it does not have an ID
         if(!person._id) {
-            //create a new person (post)
+            //create a new person (post), callback
             $http.post('/api', person).then(cb);
         } else {
-            //if it does have an ID, update existing person (put)
+            //if it does have an ID, update existing person (put), callback
             $http.put('/api/' + person._id, person).then(cb);
         };
       };
     
-    //READ
+    //READ: GET people from the api, callback
     this.getPeople = (cb) => {$http.get('/api').then(cb) };
     
-    //DELETE
+    //DELETE: detele request then pass person to be spliced
     this.deletePerson = (person) => {
         $http.delete('/api/' + person._id).then(person);
     };
