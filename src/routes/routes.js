@@ -18,13 +18,14 @@ router.post('/api', (req, res) => {
             return res.status(500).json({message: err.message});
         } else {
             res.json({'person': person, message: person.name + ' was created!'});
+            console.log(req.body, person.name + ' was added!');
         }
     });
 });
 
 //READ: Route for getting data
 router.get('/api', (req, res) => {
-    People.find({}, (err, people) => {
+    People.find( (err, people) => {
         if(err) {
         return res.status(500).json({message: err.message});
     } else {
@@ -48,6 +49,7 @@ router.put('/api/:id', (req, res) => {
                 return res.status(500).json({message: err.message});
             } else {
                 res.json({'person': person, message: person.name + ' was updated!'});
+                console.log(req.body, person.name + ' was updated!');
             }
         });
     }

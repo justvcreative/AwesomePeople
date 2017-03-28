@@ -1,14 +1,16 @@
-<header class="fixed-bottom">
-   <div id="add">
-        <a id="addButton" role="button" class="btn btn-outline-white" href="" ng-click=" creating = !creating"><i aria-hidden="true" class="fa fa-plus fa-lg"></i>Add an Awesome Person</a>
-    </div>
-    <div class="wrapper" ng-class="{'creating-person': creating}">
-        <add-person ng-show="creating"></add-person>
-    </div>
-</header>
-<section class="container">
-  <h2 id="title">Awesome People</h2>
-  <div ng-controller="mainCtrl" class="row">
-    <people class="cards col-lg-12"></people>
-  </div>
+<section ng-controller="mainCtrl">
+    <main class="container">
+      <h2 id="title">Awesome People</h2>
+      <div class="row">
+        <people class="cards col-lg-12"></people>
+      </div>
+    </main>
+    <footer class="fixed-bottom">
+       <div id="add">
+            <a id="addButton" role="button" class="btn btn-outline-white" href="" ng-click=" creating = !creating"><i aria-hidden="true" class="fa fa-plus fa-lg"></i>Add an Awesome Person</a>
+        </div>
+        <div class="wrapper" ng-class="{'creating-person': creating}">
+            <add-person ng-show="creating"></add-person>
+        </div>
+    </footer>
 </section>

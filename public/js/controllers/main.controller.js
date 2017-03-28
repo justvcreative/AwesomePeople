@@ -7,15 +7,14 @@ angular.module("awesomeapp")
     $scope.savePerson = (person) => {
         dataService.savePerson(person, (res) => {
             $scope.getPeople();
-        })
-        
+        });
     }
     
     //READ
     $scope.getPeople = () => {
         dataService.getPeople((res) => {
-            let people = res.data
-            return $scope.people = people;
+            $scope.people = res.data
+            console.log(res);
         });
     }
     
