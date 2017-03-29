@@ -20,8 +20,9 @@ Follow the instillation guides to install the required software.
 
 ### Running the App
 
-Once you have installed the requirements, clone this git repository. After you have cloned the repository, run MongoDB in your command line or terminal shell.
+Once you have installed the requirements, clone this git repository. After you have cloned the repository, cd into the AwesomePeople directory and run MongoDB in your command line or terminal shell.
 ```
+cd AwesomePeople
 mongod
 ```
 Then open a separate command line window.
