@@ -1,4 +1,5 @@
 'use strict';
+const angular = require('angular');
 
 // App Directives
 angular.module("awesomeapp")
@@ -6,7 +7,7 @@ angular.module("awesomeapp")
     .directive('people', ()=> {
         return {
             restrict: 'E',
-            templateUrl: '../js/template/people.template.html',
+            templateUrl: '../js/app/scripts/template/people.template.html',
             controller: 'mainCtrl'
         };
     })
@@ -14,7 +15,7 @@ angular.module("awesomeapp")
     .directive('addPerson', () => {
         return {
             restrict: 'E',
-            templateUrl: '../js/template/add-person.template.html',
+            templateUrl: '../js/app/scripts/template/add-person.template.html',
             controller: 'mainCtrl'
         };
 })

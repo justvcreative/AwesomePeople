@@ -25,6 +25,10 @@
     "express": "^4.14.1",
     "jquery": "^3.1.1",
     "mongoose": "^4.9.0",
-    "pug": "^2.0.0-beta11"
+    "pug": "^2.0.0-beta11",
+    "uglifyjs": "^2.4.10"
+  },
+  "devDependencies": {
+    "webpack": "^2.3.2"
   }
 }

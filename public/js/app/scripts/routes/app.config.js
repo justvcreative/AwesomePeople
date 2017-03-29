@@ -1,4 +1,5 @@
 'use strict';
+const angular = require('angular');
 
 // App Routes
 angular.module("awesomeapp")
@@ -8,7 +9,7 @@ angular.module("awesomeapp")
         $stateProvider
         .state('home', {
             url: '/',
-            templateUrl: '../js/template/app.template.html',
+            templateUrl: '../js/app/scripts/template/app.template.html',
             controller: 'mainCtrl'
         });
     }

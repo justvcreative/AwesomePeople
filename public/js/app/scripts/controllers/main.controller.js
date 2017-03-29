@@ -1,4 +1,5 @@
 'use strict';
+const angular = require('angular');
 
 //App Controller
 angular.module("awesomeapp")
