@@ -1,27 +1,40 @@
+body { background: #FDFCFA; }
 #title { margin: 1.25rem 0; }
-h1, h2, h3, h4, h5, p, label { margin: 0; }
+h1, h2, h3, h4, h5, p, label { margin: 0; color: #B25645; }
+p, a { color: #F2FFE3; }
+a:hover {text-decoration: none; color: #B25645; }
+button { margin-top: .5rem; }
+i { margin-right: .5rem; }
+main { margin-bottom: 70px; }
 
-a:hover {text-decoration: none;}
 .cards {
     display: flex;
     flex-wrap: wrap;
     box-sizing: border-box;
-    
-}
-
-main {
-    margin-bottom: 70px;
 }
 
 .card {
-    background: AliceBlue;
-    padding: 1rem;
+    background: #5E564F;
     width: calc(1140px/4.25);
     position: relative;
     display: flex;
     margin: 0 .5rem .5rem 0;
     align-items: stretch;
     overflow-wrap: break-word;
+    border: none ;
+    box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2), 0 3px 10px 0 rgba(0, 0, 0, 0.19);
+}
+
+.card-content {
+    padding: 1rem;
+}
+
+.name {
+    background: #FCF6F0;
+    padding: .5rem;
+    border-top-left-radius: .25rem;
+    border-top-right-radius: .25rem;
+
 }
 
 .wrapper {
@@ -31,11 +44,7 @@ main {
     transition: .25s transform ease-in-out;
     z-index: -1;
     color: white;
-    background-color: purple;
-}
-
-#addPerson {
-    padding: 2rem;
+    background-color: #D2E5DE;
 }
 
 .creating-person {
@@ -43,36 +52,45 @@ main {
     transition: .25s transform ease-in-out;
 }
 
-button{
-    margin-top: 1rem;
+.editing-card {
+    margin: 1rem;
 }
 
-i {
-    margin-right: .5rem;
-}
-
-.edit-form {
-    margin-bottom: .5rem;
+.editing-card label {
+    color: #F2FFE3;
 }
 
 #add {
     text-align: center;
-    background: gold;
+    background: #EB7F00;
     z-index: 3;
+}
+
+#addPerson {
+    padding: 2rem;
 }
 
 #addButton { 
     margin: 1rem;
+    border-color: #D2E5DE;
+    color: #D2E5DE;
 }
 
-.btn-outline-white {
-    border-color: purple;
-    color: purple;
+#addButton:focus, #addButton:hover {
+    background-color: #D2E5DE;
+    color: #3A403E;
 }
 
-.btn-outline-white:focus, .btn-outline-white:hover {
-    background-color: purple;
-    color: white;
+.btn-edit {
+    border-color: #D2E5DE;
+    color: #D2E5DE;
+    background: transparent;
+    display: block;
+}
+
+.btn-edit:focus, .btn-edit:hover {
+    background-color: #D2E5DE;
+    color: #3A403E;
 }
 
 footer { 
