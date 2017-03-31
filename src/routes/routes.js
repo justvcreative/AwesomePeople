@@ -18,7 +18,6 @@ router.post('/api', (req, res) => {
             return res.status(500).json({message: err.message});
         } else {
             res.json({'person': person, message: person.name + ' was created!'});
-            console.log(req.body, person.name + ' was added!');
         }
     });
 });
@@ -49,7 +48,6 @@ router.put('/api/:id', (req, res) => {
                 return res.status(500).json({message: err.message});
             } else {
                 res.json({'person': person, message: person.name + ' was updated!'});
-                console.log(req.body, person.name + ' was updated!');
             }
         });
     }

@@ -1,15 +1,15 @@
 <div id="addPerson">
-    <form>
+    <form novalidate>
         <div class="form-group clearfix">
             <fieldset>
                 <label for="name">Name</label>
-                <input type="text" class="form-control" id="name" placeholder="Name" ng-model="person.name">
+                <input name="name" type="text" class="form-control" id="name" placeholder="Name" ng-model="person.name" >
                 <label for="jobtitle">Job Title</label>
-                <input type="text" class="form-control" id="jobtitle" placeholder="Job Title" ng-model="person.jobtitle">
+                <input name="jobtitle" type="text" class="form-control" id="jobtitle" placeholder="Job Title" ng-model="person.jobtitle" >
                 <label for="company">Company</label>
-                <input type="text" class="form-control" id="company" placeholder="Company" ng-model="person.company">
+                <input name="company" type="text" class="form-control" id="company" placeholder="Company" ng-model="person.company" >
                 <label for="email">Email</label>
-                <input type="email" class="form-control" id="email" placeholder="Email" ng-model="person.email">
+                <input name="email" type="email" class="form-control" id="email" placeholder="Email" ng-model="person.email">
             </fieldset>
             <span class="pull-right">
                 <button ng-click="creating = false" type="reset" class="btn btn-outline-warning btn-sm"><i aria-hidden="true" class="fa fa-ban"></i>Cancel</button>

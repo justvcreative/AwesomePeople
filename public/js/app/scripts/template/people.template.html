@@ -9,16 +9,16 @@
         </span>
     </div>
      <div ng-show="editing" class="card">
-         <form ng-class="{'editing-card': editing}">
-             <fieldset>
-                <label>Editing Name: {{person.name}}</label>
-                <input ng-model="person.name" type="text" class="form-control edit-form">
-                <label>Editing Job Title: {{person.jobtitle}}</label>
-                <input ng-model="person.jobtitle" type="text" class="form-control edit-form">
-                <label>Editing Company: {{person.company}}</label>
-                <input ng-model="person.company" type="text" class="form-control edit-form">
-                <label>Editing Email: {{person.email}}</label>
-                <input ng-model="person.email" type="text" class="form-control edit-form"> 
+        <form ng-class="{'editing-card': editing}" novalidate>
+            <fieldset>
+                <label for="name">Editing Name: {{person.name}}</label>
+                <input name="name" ng-model="person.name" type="text" class="form-control edit-form" >
+                <label for="jobtitle">Editing Job Title: {{person.jobtitle}}</label>
+                <input name="jobtitle" ng-model="person.jobtitle" type="text" class="form-control edit-form" >
+                <label for="company">Editing Company: {{person.company}}</label>
+                <input name="company" ng-model="person.company" type="text" class="form-control edit-form" >
+                <label for="email">Editing Email: {{person.email}}</label>
+                <input name="email" ng-model="person.email" type="email" class="form-control edit-form" > 
              </fieldset>
             <button ng-click="reset()" type="button" class="btn btn-outline-warning btn-sm"><i aria-hidden="true" class="fa fa-ban"></i>Cancel</button>
             <button ng-click="deletePerson(person, $index)" type="button" class="btn btn-outline-danger btn-sm"><i aria-hidden="true" class="fa fa-times"></i>Delete</button>

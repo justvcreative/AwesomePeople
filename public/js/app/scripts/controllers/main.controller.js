@@ -14,6 +14,7 @@ angular.module("awesomeapp")
                 $scope.creating = false;
             }
             //refresh page and get people
+            $scope.sendMessage(person.name + ' was saved!');
             $scope.getPeople();
         });
     }
@@ -33,10 +34,16 @@ angular.module("awesomeapp")
         dataService.deletePerson(person);
         //remove person on the front end with the $index
         $scope.people.splice($index, 1);
+        $scope.sendMessage(person.name + ' was deleted!');
     }
     
     //Reset Form on the Cancel Button when updating people
     $scope.reset = () => {
         $scope.getPeople();
+    }
+    
+    //send a message to the view
+    $scope.sendMessage = (message) => {
+        $scope.message = message;
     }
 })

@@ -6,6 +6,7 @@ a:hover {text-decoration: none; color: #B25645; }
 button { margin-top: .5rem; }
 i { margin-right: .5rem; }
 main { margin-bottom: 70px; }
+.message { color: dimgrey; text-align: center; margin: 1rem; }
 
 .cards {
     display: flex;
